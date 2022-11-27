@@ -1,12 +1,27 @@
+import 'package:animation_basic/home_page.dart';
 import 'package:flutter/material.dart';
 
 class LinearAnimationPage extends StatelessWidget {
+  static const String routeName = '/linear';
   const LinearAnimationPage({Key? key}) : super(key: key);
+
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Animation'),),
+      appBar: AppBar(
+        title: const Text('Linear Animation'),
+        actions: [
+          IconButton(
+            onPressed: () async {
+              Navigator.pushReplacementNamed(context, HomePage.routeName);
+            },
+            icon: const Icon(Icons.screen_rotation),
+             // icon: const Text('Home')
+          )
+        ],
+      ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -32,7 +47,7 @@ class LinearAnimationPage extends StatelessWidget {
                   letterSpacing: 5.0,
                 ),),
               builder: (context, value, child)=>
-                  Text('Hello Flutter', style: value,),
+                  Text('Flutter Animation', style: value,),
             ),
           ],
         ),
