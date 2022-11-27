@@ -1,6 +1,8 @@
+import 'package:animation_basic/staggered_animation_example.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  static const String routeName='/home_page';
   const HomePage({Key? key}) : super(key: key);
 
   @override
@@ -44,7 +46,16 @@ class _HomePageState extends State<HomePage> with
         child: Icon(isPlaying ? Icons.stop : Icons.play_arrow),
       ),
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text('Rotation Transition'),
+        actions: [
+          IconButton(
+            onPressed: () async {
+              Navigator.pushReplacementNamed(context, StaggeredAnimationExample.routeName);
+            },
+            icon: const Icon(Icons.animation),
+            // icon: const Text('Home')
+          )
+        ],
       ),
       body: Center(
         child: Column(

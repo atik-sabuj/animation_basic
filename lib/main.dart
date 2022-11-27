@@ -20,7 +20,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //home: const LinearAnimationPage(),
       //home: const HomePage(),
-      home: const StaggeredAnimationExample(),
+      //home: const StaggeredAnimationExample(),
+      initialRoute: LinearAnimationPage.routeName,
+      routes: {
+        LinearAnimationPage.routeName:(context)=>LinearAnimationPage(),
+        HomePage.routeName:(context)=>HomePage(),
+        StaggeredAnimationExample.routeName:(context)=>StaggeredAnimationExample(),
+      },
 
     );
   }
