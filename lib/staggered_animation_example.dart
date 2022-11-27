@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:animation_basic/home_page.dart';
 
 class StaggeredAnimationExample extends StatefulWidget {
   const StaggeredAnimationExample({Key? key}) : super(key: key);

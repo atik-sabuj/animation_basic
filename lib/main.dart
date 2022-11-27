@@ -1,3 +1,4 @@
+import 'package:animation_basic/linear_animation_page.dart';
 import 'package:animation_basic/staggered_animation_example.dart';
 import 'package:animation_basic/home_page.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
+      //home: const LinearAnimationPage(),
+      //home: const HomePage(),
       home: const StaggeredAnimationExample(),
+
     );
   }
 }
